@@ -24,7 +24,7 @@ public class Board {
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
                 fields[i][j] = FIELD_IS_EMPTY;
-                overlay[i][j] = FieldStatus.CLOSED;
+                overlay[i][j] = FieldStatus.OPENED;
             }
         }
 

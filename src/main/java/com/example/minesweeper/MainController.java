@@ -9,9 +9,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class MainController {
     @GetMapping("")
     public String getIndexPage(Model model) {
+
+        MinesweeperApplication.testValue += 1;
+
         var game = new Game(5);
 
         model.addAttribute("game", getGameHtml(game));
+        model.addAttribute("counter", MinesweeperApplication.testValue);
 
         return "index";
     }
